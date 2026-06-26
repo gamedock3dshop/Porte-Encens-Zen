@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -7,84 +8,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;600&display=swap');
-        body { font-family: 'Montserrat', sans-serif; background-color: #f4f4f9; color: #333; scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #f4f4f9; color: #333; }
         .ar { font-family: 'Cairo', sans-serif; }
-        .whatsapp-float {
-            position: fixed; bottom: 20px; right: 20px;
-            background-color: #25d366; color: white;
-            border-radius: 50%; width: 65px; height: 65px;
-            display: flex; justify-content: center; align-items: center;
-            font-size: 38px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100;
-            text-decoration: none; transition: transform 0.3s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .hero-bg { background: linear-gradient(135deg, #1f2937 0%, #000000 100%); color: white; }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/212664601352" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-    <!-- Header / Hero -->
-    <header class="hero-bg py-16 text-center shadow-lg px-4">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Collection Porte-Encens Zen</h1>
-        <h2 class="text-3xl md:text-5xl font-bold ar mb-6 text-yellow-400">مجموعة مبخرات زين للاسترخاء</h2>
+    <header class="bg-black py-12 text-center text-white">
+        <h1 class="text-4xl font-bold">Collection Porte-Encens Zen</h1>
+        <h2 class="text-3xl font-bold ar text-yellow-500 mt-2">مجموعة مبخرات زين للاسترخاء</h2>
     </header>
 
-    <!-- Gallery Section -->
-    <section class="max-w-7xl mx-auto px-4 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Products -->
-            <div class="bg-white rounded-xl shadow-lg p-4 text-center">
-                <img src="WhatsApp Image 2026-06-26 at 14.14.15 (2).jpeg" class="w-full h-80 object-cover rounded-lg mb-4">
-                <h3 class="font-bold text-xl mb-4">Spartiate / سبارطي</h3>
-                <a href="#commande" onclick="setModele('Spartiate')" class="block bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-400">Commander / أطلب</a>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-4 text-center">
-                <img src="WhatsApp Image 2026-06-26 at 14.14.16 (1).jpeg" class="w-full h-80 object-cover rounded-lg mb-4">
-                <h3 class="font-bold text-xl mb-4">Samouraï / ساموراي</h3>
-                <a href="#commande" onclick="setModele('Samouraï')" class="block bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-400">Commander / أطلب</a>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-4 text-center">
-                <img src="WhatsApp Image 2026-06-26 at 14.14.16 (2).jpeg" class="w-full h-80 object-cover rounded-lg mb-4">
-                <h3 class="font-bold text-xl mb-4">Archer / رامي السهام</h3>
-                <a href="#commande" onclick="setModele('Archer')" class="block bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-400">Commander / أطلب</a>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-4 text-center">
-                <img src="WhatsApp Image 2026-06-26 at 14.14.15.jpeg" class="w-full h-80 object-cover rounded-lg mb-4">
-                <h3 class="font-bold text-xl mb-4">Moai / موائي</h3>
-                <a href="#commande" onclick="setModele('Moai')" class="block bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-400">Commander / أطلب</a>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-4 text-center">
-                <img src="WhatsApp Image 2026-06-26 at 14.14.14 (1).jpeg" class="w-full h-80 object-cover rounded-lg mb-4">
-                <h3 class="font-bold text-xl mb-4">Barque / قارب</h3>
-                <a href="#commande" onclick="setModele('Barque')" class="block bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-400">Commander / أطلب</a>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-4 text-center">
-                <img src="WhatsApp Image 2026-06-26 at 14.14.15 (3).jpeg" class="w-full h-80 object-cover rounded-lg mb-4">
-                <h3 class="font-bold text-xl mb-4">Duel / مبارزة</h3>
-                <a href="#commande" onclick="setModele('Duel')" class="block bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-400">Commander / أطلب</a>
-            </div>
+    <section class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow p-4 text-center">
+            <img src="WhatsApp Image 2026-06-26 at 14.14.15 (2).jpeg" class="w-full h-64 object-cover rounded mb-4">
+            <h3 class="font-bold mb-4">Spartiate / سبارطي</h3>
+            <button onclick="setModele('Spartiate')" class="bg-yellow-500 w-full py-2 rounded font-bold">Commander / أطلب</button>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 text-center">
+            <img src="WhatsApp Image 2026-06-26 at 14.14.16 (1).jpeg" class="w-full h-64 object-cover rounded mb-4">
+            <h3 class="font-bold mb-4">Samouraï / ساموراي</h3>
+            <button onclick="setModele('Samouraï')" class="bg-yellow-500 w-full py-2 rounded font-bold">Commander / أطلب</button>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 text-center">
+            <img src="WhatsApp Image 2026-06-26 at 14.14.16 (2).jpeg" class="w-full h-64 object-cover rounded mb-4">
+            <h3 class="font-bold mb-4">Archer / رامي السهام</h3>
+            <button onclick="setModele('Archer')" class="bg-yellow-500 w-full py-2 rounded font-bold">Commander / أطلب</button>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 text-center">
+            <img src="WhatsApp Image 2026-06-26 at 14.14.15.jpeg" class="w-full h-64 object-cover rounded mb-4">
+            <h3 class="font-bold mb-4">Moai / موائي</h3>
+            <button onclick="setModele('Moai')" class="bg-yellow-500 w-full py-2 rounded font-bold">Commander / أطلب</button>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 text-center">
+            <img src="WhatsApp Image 2026-06-26 at 14.14.14 (1).jpeg" class="w-full h-64 object-cover rounded mb-4">
+            <h3 class="font-bold mb-4">Barque / قارب</h3>
+            <button onclick="setModele('Barque')" class="bg-yellow-500 w-full py-2 rounded font-bold">Commander / أطلب</button>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 text-center">
+            <img src="WhatsApp Image 2026-06-26 at 14.14.15 (3).jpeg" class="w-full h-64 object-cover rounded mb-4">
+            <h3 class="font-bold mb-4">Duel / مبارزة</h3>
+            <button onclick="setModele('Duel')" class="bg-yellow-500 w-full py-2 rounded font-bold">Commander / أطلب</button>
         </div>
     </section>
 
-    <!-- Order Form Section -->
-    <section id="commande" class="bg-gray-200 py-16 px-4">
-        <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
-            <h3 class="text-3xl font-bold text-center mb-8">Formulaire de Commande</h3>
+    <section id="commande" class="bg-gray-100 py-12 px-4">
+        <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold mb-6 text-center">Formulaire de Commande</h3>
             <form id="orderForm" class="space-y-4">
-                <input type="hidden" name="modele" id="modeleHidden">
+                <div class="mb-4">
+                    <label class="block font-bold">Modèle sélectionné :</label>
+                    <input type="text" name="modele" id="modeleDisplay" readonly class="w-full p-3 border bg-gray-50 font-bold text-yellow-600 rounded">
+                </div>
+                
                 <input type="date" name="date" id="date" required class="w-full p-3 border rounded">
                 <input type="text" name="nom" required placeholder="Nom / الاسم" class="w-full p-3 border rounded">
                 <input type="tel" name="telephone" required placeholder="Téléphone / الهاتف" class="w-full p-3 border rounded">
                 <input type="text" name="ville" required placeholder="Ville / المدينة" class="w-full p-3 border rounded">
                 <textarea name="adresse" required placeholder="Adresse / العنوان" class="w-full p-3 border rounded"></textarea>
+                
                 <select name="formule" id="formule" onchange="calculateTotal()" class="w-full p-3 border rounded">
                     <option value="199">1 Pièce = 199 DH</option>
                     <option value="299">2 Pièces = 299 DH</option>
                 </select>
                 <input type="number" name="quantite" id="quantite" value="1" oninput="calculateTotal()" class="w-full p-3 border rounded">
                 <input type="text" name="total" id="total" readonly class="w-full p-3 border rounded bg-gray-100 font-bold">
+                
                 <button type="submit" id="submitBtn" class="w-full bg-green-600 text-white p-4 font-bold rounded">Confirmer / تأكيد</button>
             </form>
         </div>
@@ -92,7 +81,12 @@
 
     <script>
         document.getElementById('date').valueAsDate = new Date();
-        function setModele(m) { document.getElementById('modeleHidden').value = m; alert('Modèle ' + m + ' sélectionné !'); }
+        
+        function setModele(m) { 
+            document.getElementById('modeleDisplay').value = m; 
+            document.getElementById('commande').scrollIntoView({behavior: 'smooth'});
+        }
+        
         function calculateTotal() {
             var total = document.getElementById('formule').value * document.getElementById('quantite').value;
             document.getElementById('total').value = total + " DH";
@@ -101,12 +95,18 @@
 
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            if(document.getElementById('modeleDisplay').value == "") { alert("Veuillez choisir un modèle"); return; }
+            
             const btn = document.getElementById('submitBtn');
             btn.disabled = true; btn.innerText = "Envoi...";
-            fetch('https://script.google.com/macros/s/AKfycbztHFIfnDfyTE_ma4-XPa3hO4oxXdZN1bYipNcelAqi_-J305TzZxrk29_GULkD1-AW/exec', {
-                method: 'POST', mode: 'no-cors', body: new FormData(this)
-            }).then(() => window.location.href = "thankyou.html");
+            
+            // Nouvelle URL avec le ? pour les paramètres GET
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzruy26ja4s6oTycka91ux4QP8Mdud3ryqt_wWilqqUu0DqJggthAKh_9DWAGAJYpTP/exec?';
+            const formData = new URLSearchParams(new FormData(this)).toString();
+            
+            fetch(scriptURL + formData, { method: 'GET', mode: 'no-cors' })
+                .then(() => window.location.href = "thankyou.html");
         });
     </script>
 </body>
-</html>"""
+</html>
