@@ -1,4 +1,3 @@
-
 <html lang="fr" dir="ltr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +5,6 @@
     <title>Édition Limitée | Porte-Encens Zen / مبخرة زين</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
@@ -79,7 +77,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Lightbox Modal -->
     <div id="imageLightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300 backdrop-blur-sm" onclick="closeLightbox()">
         <button class="absolute top-6 right-6 md:top-10 md:right-10 text-white/70 hover:text-gold text-5xl transition focus:outline-none z-50" onclick="closeLightbox()">&times;</button>
         <div class="relative max-w-5xl w-full h-full flex justify-center items-center p-4">
@@ -87,7 +84,6 @@
         </div>
     </div>
 
-    <!-- Top Banner urgency -->
     <div class="bg-gold text-black py-2 px-4 text-center text-sm font-bold tracking-wider relative overflow-hidden">
         <div class="animate-pulse flex items-center justify-center gap-4">
             <i class="fas fa-shipping-fast"></i>
@@ -96,7 +92,6 @@
         </div>
     </div>
 
-    <!-- Floating Buttons -->
     <a href="https://wa.me/212664601352" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
     
     <div id="stickyCta" class="sticky-cta md:hidden flex justify-between items-center">
@@ -109,7 +104,6 @@
         </button>
     </div>
 
-    <!-- Sales Notification -->
     <div id="salesPop" class="sales-pop">
         <img id="salesImg" src="WhatsApp Image 2026-06-26 at 14.14.15 (2).jpeg" alt="Produit">
         <div>
@@ -119,7 +113,6 @@
         </div>
     </div>
 
-    <!-- Header Hero -->
     <section class="relative pt-16 pb-20 px-4 text-center overflow-hidden">
         <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full max-w-4xl bg-yellow-900 opacity-20 blur-[100px] rounded-full z-0 pointer-events-none"></div>
         
@@ -145,11 +138,9 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section id="offres" class="py-10 px-4 relative z-10">
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 relative" data-aos="zoom-in">
             
-            <!-- Offre 1 Pièce -->
             <div id="box1" onclick="selectOffer(1)" class="border-2 border-gold bg-[#111] text-white rounded-2xl p-8 cursor-pointer transform hover:-translate-y-2 transition duration-300 shadow-gold relative overflow-hidden group">
                 <div class="absolute inset-0 bg-gradient-to-br from-yellow-600/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
                 <div class="flex justify-center items-baseline mb-4 relative z-10">
@@ -160,7 +151,6 @@
                 <div class="text-center text-5xl font-bold mb-2 gradient-text">199 <span class="text-2xl text-gold">DH</span></div>
             </div>
 
-            <!-- Offre 2 Pièces -->
             <div id="box2" onclick="selectOffer(2)" class="border border-gray-800 bg-[#0a0a0a] text-white rounded-2xl p-8 cursor-pointer opacity-60 hover:opacity-100 transform hover:-translate-y-2 transition duration-300 relative group">
                 <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-600 to-yellow-400 text-black px-6 py-1.5 rounded-full font-bold text-sm shadow-[0_0_15px_rgba(212,175,55,0.8)] flex items-center gap-2 z-20">
                     <i class="fas fa-crown"></i> CHOIX PREMIUM <span class="ar text-xs">الخيار المفضل</span>
@@ -179,7 +169,6 @@
             </div>
         </div>
 
-        <!-- Timer Scarcity -->
         <div class="max-w-md mx-auto mt-10 bg-red-900/20 border border-red-500/30 rounded-xl p-4 text-center" data-aos="fade-up">
             <p class="text-red-400 font-bold mb-2 uppercase tracking-wider text-sm"><i class="fas fa-fire mr-1"></i> Stock très limité, l'offre expire dans :</p>
             <div class="flex justify-center gap-4 text-white text-2xl font-mono font-bold">
@@ -192,7 +181,6 @@
         </div>
     </section>
 
-    <!-- Gallery Selection -->
     <section class="max-w-7xl mx-auto px-4 py-16">
         <div class="text-center mb-12">
             <h3 id="instructionText" class="text-3xl font-bold text-white title-font tracking-wide">Étape 2 : Choisissez 1 modèle ci-dessous</h3>
@@ -202,7 +190,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Article 1 -->
             <div id="card-Spartiate" class="bg-[#111] rounded-2xl shadow-xl p-3 text-center border border-gray-800 transition duration-500 relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                 <div id="badge-Spartiate" class="hidden absolute top-4 right-4 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-[0_0_15px_rgba(34,197,94,0.6)] z-20"><i class="fas fa-check text-xl"></i></div>
                 <div class="overflow-hidden rounded-xl mb-4 relative group/img cursor-zoom-in" onclick="openLightbox('WhatsApp Image 2026-06-26 at 14.14.15 (2).jpeg', event)">
@@ -219,7 +206,6 @@
                 </button>
             </div>
             
-            <!-- Article 2 -->
             <div id="card-Samouraï" class="bg-[#111] rounded-2xl shadow-xl p-3 text-center border border-gray-800 transition duration-500 relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                 <div id="badge-Samouraï" class="hidden absolute top-4 right-4 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-[0_0_15px_rgba(34,197,94,0.6)] z-20"><i class="fas fa-check text-xl"></i></div>
                 <div class="overflow-hidden rounded-xl mb-4 relative group/img cursor-zoom-in" onclick="openLightbox('WhatsApp Image 2026-06-26 at 14.14.16 (1).jpeg', event)">
@@ -236,7 +222,6 @@
                 </button>
             </div>
             
-            <!-- Article 3 -->
             <div id="card-Archer" class="bg-[#111] rounded-2xl shadow-xl p-3 text-center border border-gray-800 transition duration-500 relative group overflow-hidden" data-aos="fade-up" data-aos-delay="300">
                 <div id="badge-Archer" class="hidden absolute top-4 right-4 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-[0_0_15px_rgba(34,197,94,0.6)] z-20"><i class="fas fa-check text-xl"></i></div>
                 <div class="overflow-hidden rounded-xl mb-4 relative group/img cursor-zoom-in" onclick="openLightbox('WhatsApp Image 2026-06-26 at 14.14.16 (2).jpeg', event)">
@@ -253,7 +238,6 @@
                 </button>
             </div>
             
-            <!-- Article 4 -->
             <div id="card-Moai" class="bg-[#111] rounded-2xl shadow-xl p-3 text-center border border-gray-800 transition duration-500 relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                 <div id="badge-Moai" class="hidden absolute top-4 right-4 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-[0_0_15px_rgba(34,197,94,0.6)] z-20"><i class="fas fa-check text-xl"></i></div>
                 <div class="overflow-hidden rounded-xl mb-4 relative bg-gray-900 group/img cursor-zoom-in" onclick="openLightbox('WhatsApp Image 2026-06-26 at 14.14.15.jpeg', event)">
@@ -270,7 +254,6 @@
                 </button>
             </div>
             
-            <!-- Article 5 -->
             <div id="card-Barque" class="bg-[#111] rounded-2xl shadow-xl p-3 text-center border border-gray-800 transition duration-500 relative group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                 <div id="badge-Barque" class="hidden absolute top-4 right-4 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-[0_0_15px_rgba(34,197,94,0.6)] z-20"><i class="fas fa-check text-xl"></i></div>
                 <div class="overflow-hidden rounded-xl mb-4 relative group/img cursor-zoom-in" onclick="openLightbox('WhatsApp Image 2026-06-26 at 14.14.14 (1).jpeg', event)">
@@ -287,7 +270,6 @@
                 </button>
             </div>
             
-            <!-- Article 6 -->
             <div id="card-Duel" class="bg-[#111] rounded-2xl shadow-xl p-3 text-center border border-gray-800 transition duration-500 relative group overflow-hidden" data-aos="fade-up" data-aos-delay="300">
                 <div id="badge-Duel" class="hidden absolute top-4 right-4 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-[0_0_15px_rgba(34,197,94,0.6)] z-20"><i class="fas fa-check text-xl"></i></div>
                 <div class="overflow-hidden rounded-xl mb-4 relative group/img cursor-zoom-in" onclick="openLightbox('WhatsApp Image 2026-06-26 at 14.14.15 (3).jpeg', event)">
@@ -306,9 +288,7 @@
         </div>
     </section>
 
-    <!-- Checkout Form Section -->
     <section id="commande" class="py-20 px-4 relative overflow-hidden">
-        <!-- Decoration bg -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-full bg-gold opacity-5 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-3xl mx-auto glass-form p-8 md:p-12 rounded-3xl shadow-2xl border-t-4 border-gold relative z-10" data-aos="zoom-in" data-aos-duration="800">
@@ -317,12 +297,10 @@
             
             <form id="orderForm" class="space-y-6">
                 
-                <!-- Hidden inputs -->
                 <input type="hidden" name="modele" id="modeleHidden">
                 <input type="hidden" name="formule" id="formuleHidden" value="199">
                 <input type="date" name="date" id="date" required class="hidden">
 
-                <!-- Affichage du panier -->
                 <div class="bg-black/40 border border-gold/30 p-5 rounded-2xl mb-8 relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-1 h-full bg-gold"></div>
                     <h4 class="font-bold text-white mb-2 uppercase tracking-wider text-sm flex items-center gap-2"><i class="fas fa-shopping-bag text-gold"></i> Récapitulatif du panier</h4>
@@ -376,7 +354,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="border-t border-white/10 py-10 text-center">
         <h2 class="text-2xl font-bold title-font text-white tracking-widest mb-4">ZEN COLLECTION</h2>
         <p class="text-gray-500 text-sm mb-6">L'art de l'apaisement à domicile.</p>
@@ -581,7 +558,7 @@
             btn.disabled = true; 
             btn.innerHTML = '<span class="relative z-10 flex items-center justify-center gap-3"><i class="fas fa-spinner fa-spin"></i> TRAITEMENT EN COURS...</span>';
             
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzruy26ja4s6oTycka91ux4QP8Mdud3ryqt_wWilqqUu0DqJggthAKh_9DWAGAJYpTP/exec?';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwi3wJ-c6qs0Yv9xwz2aqbhO17iz44zseRhNGOvhKYEHj0ktZ9asiYgEQkb6E3vXGG_6g/exec?';
             const formData = new URLSearchParams(new FormData(this)).toString();
             
             fetch(scriptURL + formData, { method: 'GET', mode: 'no-cors' })
@@ -595,4 +572,3 @@
     </script>
 </body>
 </html>
-"""
