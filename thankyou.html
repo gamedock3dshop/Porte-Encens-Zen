@@ -1,8 +1,5 @@
 <html lang="fr" dir="ltr">
-
 <head>
-
-<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -19,17 +16,26 @@ s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s);
 }(window, document,'script');
 
-fbq('init', '1283861668639700');
+fbq('init', '1021353243878452');
 fbq('track', 'PageView');
+
+// --- DÉTECTION DE LA VENTE (PURCHASE) ---
+// 1. On récupère le prix depuis l'URL envoyé par index.html
+const urlParams = new URLSearchParams(window.location.search);
+let prixCommande = urlParams.get('prix') || 199; // 199 par défaut
+
+// 2. On envoie l'événement d'Achat à Meta
+fbq('track', 'Purchase', {
+    value: prixCommande,
+    currency: 'MAD'
+});
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1283861668639700&ev=PageView&noscript=1"/>
+src="https://www.facebook.com/tr?id=1021353243878452&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
-
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merci / شكرا</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -60,11 +66,4 @@ src="https://www.facebook.com/tr?id=1283861668639700&ev=PageView&noscript=1"/>
     </div>
 
 </body>
-</html>"""
-
-zip_path = "/mnt/data/site_port_v2_update.zip"
-with zipfile.ZipFile(zip_path, 'w') as zipf:
-    zipf.writestr('index.html', index_html)
-    zipf.writestr('thankyou.html', thankyou_html)
-
-print(f"Zip file created at {zip_path}")
+</html>

@@ -1,7 +1,5 @@
 <html lang="fr" dir="ltr" class="scroll-smooth">
-
 <head>
-<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,16 +16,15 @@ s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s);
 }(window, document,'script');
 
-fbq('init', '1283861668639700');
+fbq('init', '1021353243878452');
 fbq('track', 'PageView');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1283861668639700&ev=PageView&noscript=1"/>
+src="https://www.facebook.com/tr?id=1021353243878452&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Édition Limitée | Porte-Encens Zen / مبخرة زين</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -400,14 +397,13 @@ src="https://www.facebook.com/tr?id=1283861668639700&ev=PageView&noscript=1"/>
 
         // LIGHTBOX LOGIC
         function openLightbox(src, event) {
-            event.stopPropagation(); // Évite de déclencher d'autres événements
+            event.stopPropagation();
             const lb = document.getElementById('imageLightbox');
             const lbImg = document.getElementById('lightboxImg');
             
             lbImg.src = src;
             lb.classList.remove('hidden');
             
-            // Petit délai pour permettre la transition CSS
             setTimeout(() => {
                 lb.classList.remove('opacity-0');
                 lbImg.classList.remove('scale-95');
@@ -571,7 +567,7 @@ src="https://www.facebook.com/tr?id=1283861668639700&ev=PageView&noscript=1"/>
             document.getElementById('totalDisplay').value = total + " DH";
         }
 
-        // VALIDATION
+        // VALIDATION ET REDIRECTION AVEC PRIX
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -589,7 +585,15 @@ src="https://www.facebook.com/tr?id=1283861668639700&ev=PageView&noscript=1"/>
             const formData = new URLSearchParams(new FormData(this)).toString();
             
             fetch(scriptURL + formData, { method: 'GET', mode: 'no-cors' })
-                .then(() => window.location.href = "thankyou.html")
+                .then(() => {
+                    // Calcul du prix final pour l'URL de remerciement
+                    const basePrice = activeOffer === 1 ? 199 : 299;
+                    const qty = parseInt(document.getElementById('quantite').value) || 1;
+                    const finalTotal = basePrice * qty;
+                    
+                    // Redirection avec le paramètre prix
+                    window.location.href = `thankyou.html?prix=${finalTotal}`;
+                })
                 .catch(() => {
                     alert("Une erreur est survenue. Veuillez vérifier votre connexion.");
                     btn.disabled = false;
